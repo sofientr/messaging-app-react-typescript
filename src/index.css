@@ -1,0 +1,8 @@
+body {
+  margin: 0;
+  font-family: 'Arial'
+}
+
+#root {
+  height: 100vh;
+}

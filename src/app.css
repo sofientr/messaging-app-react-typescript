@@ -1,0 +1,138 @@
+:root {
+  --WHITE: #ffffff;
+  --BUTTON_BACKGROUND: #2d3436;
+  --TOOLBAR_BACKGROUND: #0984e3;
+  --MESSAGE_BACKGROUND_SELF: #55efc4;
+  --MESSAGE_BACKGROUND_REPLY: #dfe6e9;
+  --MESSAGE_TAG: #ff7675;
+  --MESSAGE_DATE: #636e72;
+  --IMAGE_HEIGHT:450px;
+  --SENDER_FONT_SIZE:15px;
+  --DATE_FONT_SIZE:10px;
+  --SPACE_BETWEEN_MESSAGES:40px;
+}
+
+.app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: var(--TOOLBAR_BACKGROUND);
+  height: 45px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #ecf0f1;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+footer {
+  background-color: var(--TOOLBAR_BACKGROUND);
+  height: 45px;
+
+  display: flex;
+  padding: 16px;
+  align-items: center;
+}
+
+.messageInput {
+  display: flex;
+  flex: 1;
+  height: 100%;
+  background-color: var(--WHITE);
+  border-radius: 15px;
+  margin-right: 16px;
+
+  padding-left: 16px;
+  padding-right: 16px;
+  align-items: center;
+}
+
+.messageInput input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 17px;
+}
+
+.messageSendButton {
+  background-color: var(--BUTTON_BACKGROUND);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 17px;
+  font-weight: bold;
+  color: var(--WHITE);
+  cursor: pointer;
+  outline: none;
+}
+
+.conversation {
+  flex: 1;
+  overflow: auto;
+  padding: 10px;
+}
+
+.chat_message{
+  position:relative;
+  width: fit-content;
+  max-width: 80%;
+  padding: 10px;
+  margin: var(--SPACE_BETWEEN_MESSAGES) 0px var(--SPACE_BETWEEN_MESSAGES) 0px;
+  border-radius: 0px 10px 10px 10px;
+  background-color: var(--MESSAGE_BACKGROUND_REPLY);
+}
+.chat_message_image{
+  position:relative;
+  width: fit-content;
+  max-width: 80%;
+  padding: 10px;
+  margin-top: calc(var(--IMAGE_HEIGHT) + var(--SPACE_BETWEEN_MESSAGES));
+  margin-bottom: var(--SPACE_BETWEEN_MESSAGES);
+  border-radius: 0px 0px 10px 10px;
+  background-color: var(--MESSAGE_BACKGROUND_REPLY);
+}
+
+
+
+.chat_image{
+  
+  position: absolute;
+  
+  left: 0px;
+  width: 100%;
+  border-radius: 0px 10px 0px 0px;
+  height: var(--IMAGE_HEIGHT);
+  top:calc(var(--IMAGE_HEIGHT) * -1);;
+}
+
+
+.chat_name{
+  
+  position:absolute;
+  left: 0;
+  top: -20px;
+  font-size: var(--SENDER_FONT_SIZE);
+}
+
+.chat_name_image{
+  
+  position:absolute;
+  left: 0;
+  top: calc(var(--IMAGE_HEIGHT)* -1 - 20px);
+  font-size: var(--SENDER_FONT_SIZE);
+}
+
+.date{
+  position:absolute;
+  color:var(--MESSAGE_DATE);
+  left: 0;
+  bottom: -15px;
+  font-size: var(--DATE_FONT_SIZE);
+
+}
+
