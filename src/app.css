@@ -77,6 +77,11 @@ footer {
   padding: 10px;
 }
 
+.tag {
+  color: var(--MESSAGE_TAG);
+  display: inline-block;
+}
+
 /******************** others messages **********************/
 .chat_message{
   position:relative;
