@@ -77,6 +77,7 @@ footer {
   padding: 10px;
 }
 
+/******************** others messages **********************/
 .chat_message{
   position:relative;
   width: fit-content;
@@ -136,3 +137,68 @@ footer {
 
 }
 
+/******************** owner messages*************/
+.chat_message_owner{
+  position:relative;
+  max-width: 80%;
+  width: fit-content;
+  padding: 10px;
+  margin: var(--SPACE_BETWEEN_MESSAGES) 0px var(--SPACE_BETWEEN_MESSAGES) auto;
+  border-radius: 10px 0px 10px 10px;
+  background-color: var(--MESSAGE_BACKGROUND_SELF);
+
+}
+
+.chat_message_owner .chat_name{
+  position:absolute;
+  right: 0;
+  left:auto;
+  top: -20px;
+  font-size: var(--SENDER_FONT_SIZE);
+}
+
+
+.chat_message_image_owner{
+  margin-left: auto;
+  position:relative;
+  width: fit-content;
+  max-width: 80%;
+  padding: 10px;
+  margin-top: calc(var(--IMAGE_HEIGHT) + var(--SPACE_BETWEEN_MESSAGES));
+  margin-bottom: var(--SPACE_BETWEEN_MESSAGES);
+  
+  border-radius: 0px 0px 10px 10px;
+  background-color:var(--MESSAGE_BACKGROUND_SELF);
+}
+
+.chat_message_image_owner .chat_name_image{
+  
+  position:absolute;
+  right: 0;
+  left: auto;
+  top: calc(var(--IMAGE_HEIGHT)* -1 - 20px);
+  font-size: var(--SENDER_FONT_SIZE);
+}
+
+.chat_message_image_owner .chat_image{
+  
+  position: absolute;
+  
+  left: 0px;
+  width: 100%;
+  border-radius: 10px 0px 0px 0px;
+  height: var(--IMAGE_HEIGHT);
+  top:calc(var(--IMAGE_HEIGHT) * -1);
+}
+
+
+.chat_message_image_owner .date ,.chat_message_owner .date{
+  position:absolute;
+  color:var(--MESSAGE_DATE);
+  right: 0;
+  left:auto;
+  bottom: -15px;
+  font-size: var(--SENDER_FONT_SIZE);
+  font-size: var(--DATE_FONT_SIZE);
+
+}
